@@ -1,16 +1,217 @@
 <!doctype html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Алог — анонимное общение</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet" />
-  </head>
-  <body style="font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #121110; color: #fafafa;">
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Алог — анонимное общение</title>
+  <meta name="description" content="Алог: анонимные диалоги с ИИ‑подбором, мгновенным переводом и модерацией. Бесплатно. Запуск 1 января 2026." />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a href="#main" class="sr-only">Перейти к содержанию</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <div style="display:flex;align-items:center;gap:12px">
+        <div class="wordmark" aria-label="Алог — анонимное общение">Алог</div>
+        <span class="pill"><span class="dot"></span>Скоро запуск • 1&nbsp;января&nbsp;2026</span>
+      </div>
+      <nav class="nav">
+        <a href="#idea">Идея</a>
+        <a href="#how">Как работает</a>
+        <a href="#safety">Безопасность</a>
+        <a href="#faq">FAQ</a>
+        <a href="#fsi">ФСИ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="section hero" aria-labelledby="hero-title">
+      <div class="glow" aria-hidden="true"></div>
+      <div class="container">
+        <span class="pill"><span class="dot"></span>Сервис в разработке • Бесплатно</span>
+        <h1 id="hero-title" class="headline h1 section-title" style="max-width:860px">Делаем анонимное общение простым, безопасным и полезным.</h1>
+        <p class="sub" style="max-width:680px;font-size:18px">Алог подбирает собеседников по интересам и MBTI, мгновенно переводит сообщения на любой язык и защищает беседу ИИ‑модерацией.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:16px">
+          <a href="#idea" class="btn-primary">Подробнее
+            <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <span class="pill">Запуск 1&nbsp;января&nbsp;2026</span>
+        </div>
+        <div class="grid-3" style="margin-top:24px">
+          <div class="card" style="padding:20px">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9.5 12l1.8 1.8 3.7-3.7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              <h3 class="headline" style="margin:0">ИИ‑модерация 24/7</h3>
+            </div>
+            <p class="sub" style="margin:0">Антиспам и фильтры нарушений. Реакция в реальном времени.</p>
+          </div>
+          <div class="card" style="padding:20px">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3C9 6.5 9 17.5 12 21" stroke="currentColor" stroke-width="1.5"/></svg>
+              <h3 class="headline" style="margin:0">Перевод без границ</h3>
+            </div>
+            <p class="sub" style="margin:0">Дословный двунаправленный перевод. Общайтесь на любом языке.</p>
+          </div>
+          <div class="card" style="padding:20px">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 11a4 4 0 118 0c0 4-4 6-4 6s-4-2-4-6z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+              <h3 class="headline" style="margin:0">Подбор с MBTI</h3>
+            </div>
+            <p class="sub" style="margin:0">Тип личности + интересы и цели диалога для точных совпадений.</p>
+          </div>
+        </div>
+      </div>
+      <div class="divider"></div>
+    </section>
+
+    <!-- ИДЕЯ -->
+    <section id="idea" class="section" aria-labelledby="idea-title">
+      <div class="container">
+        <div class="grid-2" style="align-items:start">
+          <div>
+            <h2 id="idea-title" class="headline h2 section-title">Анонимное общение без границ</h2>
+            <p class="sub" style="margin:16px 0 24px">Текст, голос и видео в одной платформе без передачи личных данных. Интерфейс рассчитан на короткие и длинные диалоги, а рекомендации улучшаются со временем.</p>
+            <ul class="sub" style="display:grid;gap:8px;padding:0;margin:0;list-style:none">
+              <li style="display:flex;align-items:center;gap:8px"><span class="dot"></span>Без покупок и подписок</li>
+              <li style="display:flex;align-items:center;gap:8px"><span class="dot"></span>Автоперевод на любой язык</li>
+              <li style="display:flex;align-items:center;gap:8px"><span class="dot"></span>Защита от спама и запрещённого</li>
+              <li style="display:flex;align-items:center;gap:8px"><span class="dot"></span>Подбор по интересам и MBTI</li>
+            </ul>
+          </div>
+          <div class="card" style="padding:24px">
+            <div class="sub" style="font-size:14px;margin-bottom:12px">Фрагмент интерфейса</div>
+            <div class="chat">
+              <div class="row">
+                <div class="avatar">A</div>
+                <div class="bubble self">
+                  Привет! Хочу обсудить идею стартапа.
+                  <div class="meta"><span>12:40</span><span title="Перевод включён">↔ перевод</span></div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="avatar">B</div>
+                <div class="bubble">
+                  Давай. Какую проблему решаете?
+                  <div class="meta"><span>12:41</span></div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="avatar">A</div>
+                <div class="bubble self">
+                  Matching через MBTI и интересы, плюс моментальный перевод.
+                  <div class="meta"><span>12:42</span><span title="Перевод включён">↔ перевод</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="divider"></div>
+    </section>
+
+    <!-- КАК ЭТО РАБОТАЕТ -->
+    <section id="how" class="section" aria-labelledby="how-title">
+      <div class="container">
+        <h2 id="how-title" class="headline h2 section-title" style="margin-bottom:24px">Как это работает</h2>
+        <ol class="grid-3" style="counter-reset:step;grid-template-columns:repeat(1,1fr)">
+          <li class="card" style="padding:20px"><div class="sub" style="font-size:14px;margin-bottom:8px">Шаг 1</div><div class="headline" style="margin-bottom:4px">Задайте темы и стиль</div><div class="sub">Выберите интересы и ожидания от беседы</div></li>
+          <li class="card" style="padding:20px"><div class="sub" style="font-size:14px;margin-bottom:8px">Шаг 2</div><div class="headline" style="margin-bottom:4px">Подбор собеседника</div><div class="sub">ИИ учитывает MBTI, цели и поведенческие сигналы</div></li>
+          <li class="card" style="padding:20px"><div class="sub" style="font-size:14px;margin-bottom:8px">Шаг 3</div><div class="headline" style="margin-bottom:4px">Диалог без барьеров</div><div class="sub">Перевод и защита работают автоматически</div></li>
+          <li class="card" style="padding:20px"><div class="sub" style="font-size:14px;margin-bottom:8px">Шаг 4</div><div class="headline" style="margin-bottom:4px">Обратная связь</div><div class="sub">Короткая оценка улучшает будущие совпадения</div></li>
+        </ol>
+      </div>
+      <div class="divider"></div>
+    </section>
+
+    <!-- БЕЗОПАСНОСТЬ -->
+    <section id="safety" class="section" aria-labelledby="safety-title">
+      <div class="container">
+        <h2 id="safety-title" class="headline h2 section-title" style="margin-bottom:16px">Конфиденциальность и безопасность</h2>
+        <div class="grid-3">
+          <div class="card" style="padding:20px"><h3 class="headline" style="margin:0 0 8px">Анонимность по умолчанию</h3><p class="sub" style="margin:0">Минимум данных. Скрытые идентификаторы. Без привязки личности.</p></div>
+          <div class="card" style="padding:20px"><h3 class="headline" style="margin:0 0 8px">Шифрование и модерация</h3><p class="sub" style="margin:0">Шифрование передачи и хранения. ИИ‑фильтры спама и нарушений.</p></div>
+          <div class="card" style="padding:20px"><h3 class="headline" style="margin:0 0 8px">Прозрачные правила</h3><p class="sub" style="margin:0">Понятные стандарты сообщества и быстрые инструменты жалобы.</p></div>
+        </div>
+      </div>
+      <div class="divider"></div>
+    </section>
+
+    <!-- MBTI + WEB3 -->
+    <section class="section" aria-labelledby="mbti-title">
+      <div class="container">
+        <div class="grid-2" style="align-items:center">
+          <div>
+            <h2 id="mbti-title" class="headline h2 section-title">Подбор качеством, не случайностью</h2>
+            <p class="sub" style="margin:16px 0 0">Алгоритмы сопоставляют интересы, цели беседы и тип личности по MBTI. Это повышает вероятность полезного диалога и снижает фрустрацию.</p>
+          </div>
+          <div class="card" style="padding:20px">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7.5 13.5l-1 1a3 3 0 104.2 4.2l3.6-3.6a3 3 0 10-4.2-4.2l-1 .9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M16.5 10.5l1-1a3 3 0 10-4.2-4.2l-3.6 3.6a3 3 0 104.2 4.2l1-.9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <h3 class="headline" style="margin:0">Web3-блокчейн, полностью анонимно</h3>
+            </div>
+            <p class="sub" style="margin:0">Данные шифруются на стороне клиента и сохраняются децентрализованно. Без привязки к личности.</p>
+          </div>
+        </div>
+      </div>
+      <div class="divider"></div>
+    </section>
+
+    <!-- ИИ ВОЗМОЖНОСТИ -->
+    <section class="section" aria-labelledby="ai-title">
+      <div class="container">
+        <h2 id="ai-title" class="headline h2 section-title" style="margin-bottom:16px">ИИ‑возможности</h2>
+        <div class="grid-3">
+          <div class="card" style="padding:20px"><div style="display:flex;align-items:center;gap:10px;margin-bottom:8px"><svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3C9 6.5 9 17.5 12 21" stroke="currentColor" stroke-width="1.5"/></svg><h3 class="headline" style="margin:0">Мгновенный перевод</h3></div><p class="sub" style="margin:0">Автоматический, двунаправленный и дословный, без ограничений по региону.</p></div>
+          <div class="card" style="padding:20px"><div style="display:flex;align-items:center;gap:10px;margin-bottom:8px"><svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9.5 12l1.8 1.8 3.7-3.7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><h3 class="headline" style="margin:0">Модерация ИИ</h3></div><p class="sub" style="margin:0">Предотвращает спам, нарушения и вредоносный контент. Работает фоном.</p></div>
+          <div class="card" style="padding:20px"><div style="display:flex;align-items:center;gap:10px;margin-bottom:8px"><svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 11a4 4 0 118 0c0 4-4 6-4 6s-4-2-4-6z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg><h3 class="headline" style="margin:0">Умный матчинг</h3></div><p class="sub" style="margin:0">Комбинирует MBTI, интересы и контекст для точных совпадений.</p></div>
+        </div>
+      </div>
+      <div class="divider"></div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section" aria-labelledby="faq-title">
+      <div class="container">
+        <h2 id="faq-title" class="headline h2 section-title" style="margin-bottom:16px">FAQ</h2>
+        <div class="grid-2">
+          <details class="card"><summary>Сервис платный?</summary><p class="sub">Нет. Полностью бесплатно. Покупок внутри приложения нет.</p></details>
+          <details class="card"><summary>Нужна регистрация с паспортными данными?</summary><p class="sub">Нет. Анонимность по умолчанию.</p></details>
+          <details class="card"><summary>Когда запуск?</summary><p class="sub">Публичный запуск запланирован на 1 января 2026.</p></details>
+          <details class="card"><summary>Есть перевод?</summary><p class="sub">Да. Сообщения переводятся автоматически между любыми языками.</p></details>
+        </div>
+      </div>
+      <div class="divider"></div>
+    </section>
+
+    <!-- ФСИ -->
+    <section id="fsi" class="section" aria-labelledby="fsi-title">
+      <div class="container">
+        <div class="card" style="padding:24px;display:flex;flex-direction:column;gap:16px;align-items:center;justify-content:space-between">
+          <div style="text-align:center">
+            <div class="sub">Партнёрство</div>
+            <h3 id="fsi-title" class="headline" style="margin:6px 0 0;font-size:20px">Проект реализован при поддержке Фонда содействия инновациям</h3>
+          </div>
+          <img src="https://files.catbox.moe/8cng5v.png" alt="Логотип ФСИ" style="width:224px;height:80px;object-fit:contain" />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© ООО "Алог" 2025 г.</p>
+    </div>
+  </footer>
+
+  <!-- Manual checks:
+    1) H2 заголовки имеют верхний отступ (класс .section-title).
+    2) #fsi имеет внешний margin-top и дополнительный padding-top контейнера.
+    3) Подвал содержит только копирайт и имеет большие отступы.
+    4) Карточка Web3 оформлена как стандартные микро‑карточки: иконка + заголовок + одно предложение.
+  -->
+</body>
 </html>
