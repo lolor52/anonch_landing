@@ -40,6 +40,7 @@ img{max-width:100%;height:auto;display:block}
 .h2{font-size: clamp(24px,4.5vw,36px);line-height:1.25}
 .sub{color:var(--text-2)}
 
+ol.grid-3{list-style:none;margin:0;padding:0}
 .grid-3{display:grid;grid-template-columns:1fr;gap:24px}
 @media(min-width:768px){.grid-3{grid-template-columns:repeat(3,1fr)}}
 .grid-2{display:grid;grid-template-columns:1fr;gap:32px}
