@@ -64,6 +64,33 @@ summary{cursor:pointer;font-weight:600}
 
 /* FSI spacing to avoid overlap with FAQ */
 #fsi{margin-top: clamp(80px, 12vw, 180px)}
+.partners-layout{display:grid;row-gap:12px;column-gap:24px;width:100%}
+.partners-title{margin:0}
+.partners-lead{margin:0;max-width:500px;line-height:1.6}
+@media(min-width:900px){
+  .partners-layout{grid-template-columns:minmax(0,1.5fr) minmax(0,.95fr);align-items:start;
+    grid-template-areas:
+      "title title"
+      "lead info"
+      "logo info"}
+  .partners-title{grid-area:title}
+  .partners-lead{grid-area:lead}
+  .partners-card--logo{grid-area:logo}
+  .partners-card--info{grid-area:info}
+  .partners-card--logo,
+  .partners-card--info{align-self:stretch}
+}
+.partners-card{background:var(--bg-2);padding:24px;display:grid;gap:14px;align-content:start;text-align:left}
+@media(min-width:900px){.partners-card{min-height:250px}}
+.partners-card--logo{margin-top:6px}
+.partners-logo-wrap{padding:18px;border-radius:16px;background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(0,0,0,.18));width:100%;
+  min-height:clamp(120px,18vw,160px);display:flex;align-items:center;justify-content:flex-start}
+.partners-logo{max-height:96px;width:auto;max-width:100%;
+  height:auto;display:block;object-fit:contain}
+.partners-logo-meta{display:grid;gap:6px}
+.partners-logo-title{letter-spacing:-.01em}
+.partners-card-title{margin:0}
+.partners-card-text{margin:0;line-height:1.55}
 
 /* Footer */
 .footer{padding-block:clamp(96px,10vw,140px)}
